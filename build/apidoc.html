@@ -1,0 +1,132 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://www.highcharts.com"
+
+    >highcharts (v5.0.10)</a>
+</h1>
+<h4>JavaScript charting framework</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.highcharts">module highcharts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.highcharts.highcharts">
+            function <span class="apidocSignatureSpan"></span>highcharts
+            <span class="apidocSignatureSpan">(L)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.highcharts" id="apidoc.module.highcharts">module highcharts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.highcharts.highcharts" id="apidoc.element.highcharts.highcharts">
+        function <span class="apidocSignatureSpan"></span>highcharts
+        <span class="apidocSignatureSpan">(L)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">highcharts = function (L){L=function(){var a=window,B=a.document,A=a.navigator&#x26;&#x26;a.navigator.userAgent||&#x22;&#x22;,H=B&#x26;&#x26;B.createElementNS&#x26;&#x26;!!B.createElementNS
+(&#x22;http://www.w3.org/2000/svg&#x22;,&#x22;svg&#x22;).createSVGRect,G=/(edge|msie|trident)/i.test(A)&#x26;&#x26;!window.opera,r=!H,f=/Firefox/.test(A),l=f&#x26;&#x26;
+4&#x3e;parseInt(A.split(&#x22;Firefox/&#x22;)[1],10);return a.Highcharts?a.Highcharts.error(16,!0):{product:&#x22;Highcharts&#x22;,
+version:&#x22;5.0.10&#x22;,deg2rad:2*Math.PI/360,doc:B,hasBidiBug:l,hasTouch:B&#x26;&#x26;void 0!==B.documentElement.ontouchstart,isMS:G,isWebKit:/AppleWebKit
+/.test(A),isFirefox:f,isTouchDevice:/(Mobile|Android|Windows Phone)/.test(A),SVG_NS:&#x22;http://www.w3.org/2000/svg&#x22;,chartCount:0,seriesTypes
+:{},symbolSizes:{},svg:H,vml:r,win:a,charts:[],marginNames:[&#x22;plotTop&#x22;,&#x22;marginRight&#x22;,&#x22;marginBottom&#x22;,&#x22;plotLeft&#x22;],noop:function(){}}}();(
+function(a){var B=[],A=a.charts,H=a.doc,G=a.win;a.error=function(r,f){r=a.isNumber(r)?&#x22;Highcharts error #&#x22;+
+r+&#x22;: www.highcharts.com/errors/&#x22;+r:r;if(f)throw Error(r);G.console&#x26;&#x26;console.log(r)};a.Fx=function(a,f,l){this.options=f;this.elem
+=a;this.prop=l};a.Fx.prototype={dSetter:function(){var a=this.paths[0],f=this.paths[1],l=[],q=this.now,k=a.length,u;if(1===q)l=this
+.toD;else if(k===f.length&#x26;&#x26;1&#x3e;q)for(;k--;)u=parseFloat(a[k]),l[k]=isNaN(u)?a[k]:q*parseFloat(f[k]-u)+u;else l=f;this.elem.attr(&#x22;d
+&#x22;,l,null,!0)},update:function(){var a=this.elem,f=this.prop,l=this.now,q=this.options.step;if(this[f+&#x22;Setter&#x22;])this[f+
+&#x22;Setter&#x22;]();else a.attr?a.element&#x26;&#x26;a.attr(f,l,null,!0):a.style[f]=l+this.unit;q&#x26;&#x26;q.call(a,l,this)},run:function(a,f,l){var r=this
+,k=function(a){return k.stopped?!1:r.step(a)},u;this.startTime=+new Date;this.start=a;this.end=f;this.unit=l;this.now=this.start
+;this.pos=0;k.elem=this.elem;k.prop=this.prop;k()&#x26;&#x26;1===B.push(k)&#x26;&#x26;(k.timerId=setInterval(function(){for(u=0;u&#x3c;B.length;u++)B[u]()||
+B.splice(u--,1);B.length||clearInterval(k.timerId)},13))},step:function(a){var f=+new Date,r,q=this.options;r=this.elem;
+var k=q.complete,u=q.duration,d=q.curAnim,c;if(r.attr&#x26;&#x26;!r.element)r=!1;else if(a||f&#x3e;=u+this.startTime){this.now=this.end;this.pos
+=1;this.update();a=d[this.prop]=!0;for(c in d)!0!==d[c]&#x26;&#x26;(a=!1);a&#x26;&#x26;k&#x26;&#x26;k.call(r);r=!1}else this.pos=q.easing((f-this.startTime)/u
+),this.now=this.start+(this.end-this.start)*this.pos,this.update(),r=!0;return r},initPath:function(r,f,l){function q(a){var b,e
+;for(t=a.length;t--;)b=&#x22;M&#x22;===a[t]||&#x22;L&#x22;===a[t],e=/[a-zA-Z]/.test(a[t+3]),b&#x26;&#x26;e&#x26;&#x26;a.splice(t+1,0,a[t+1],a[t+2],a[t+1],a[t+
+2])}function k(a,e){for(;a.length&#x3c;p;){a[0]=e[p-a.length];var h=a.slice(0,b);[].splice.apply(a,[0,0].concat(h));D&#x26;&#x26;(h=a.slice(a.length
+-b),[].splice.apply(a,[a.length,0].concat(h)),t--)}a[0]=&#x22;M&#x22;}function u(a,e){for(var c=(p-a.length)/b;0&#x3c;c&#x26;&#x26;c--;)h=a.slice().splice
+(a.length/w-b,b*w),h[0]=e[p-b-c*b],z&#x26;&#x26;(h[b-6]=h[b-2],h[b-5]=h[b-1]),[].splice.apply(a,[a.length/w,0].concat(h)),D&#x26;&#x26;c--}f=f||&#x22;&#x22;;var
+ d,c=r.startX,n=r.endX,z=-1&#x3c;f.indexOf(&#x22;C&#x22;),b=z?7:3,p,h,t;f=f.split(&#x22; &#x22;);l=l.slice();var D=r.isArea,w=D?2:1,e;
+z&#x26;&#x26;(q(f),q(l));if(c&#x26;&#x26;n){for(t=0;t&#x3c;c.length;t++)if(c[t]===n[0]){d=t;break}else if(c[0]===n[n.length-c.length+t]){d=t;e=!0;break}void
+ 0===d&#x26;&#x26;(f=[])}f.length&#x26;&#x26;a.isNumber(d)&#x26;&#x26;(p=l.length+d*w*b,e?(k(f,l),u(l,f)):(k(l,f),u(f,l)));return[f,l]}};a.extend=function(a,f
+){var r;a||(a={});for(r in f)a[r]=f[r];return a};a.merge=function(){var r,f=arguments,l,q={},k=function(u,d){var c,n;&#x22;object&#x22;!==
+typeof u&#x26;&#x26;(u={});for(n in d)d.hasOwnProperty(n)&#x26;&#x26;(c=d[n],a.isObject(c,!0)&#x26;&#x26;&#x22;renderTo&#x22;!==n&#x26;&#x26;&#x22;number&#x22;!==typeof c.nodeType?
+u[n]=k(u[n]||{},c):u[n]=d[n]);return u};!0===f[0]&#x26;&#x26;(q=f[1],f=Array.prototype.slice.call(f,2));l=f.length;for(r=0;r&#x3c;l;r++)q=k(q,f
+[r]);return q};a.pInt=function(a,f){return parseInt(a,f||10)};a.isString=function(a){return&#x22;string&#x22;===typeof a};a.isArray=function
+(a){a=Object.prototype.toString.call(a);return&#x22;[object Array]&#x22;===a||&#x22;[object Array Iterator]&#x22;===a};a.isObject=function(r,f){return
+ r&#x26;&#x26;&#x22;object&#x22;===typeof r&#x26;&#x26;(!f||!a.isArray(r))};a.isNumber=function(a){return&#x22;number&#x22;===typeof a&#x26;&#x26;!isNaN(a)};a.erase=
+function(a,f){for(var r=a.length;r--;)if(a[r]===f){a.splice(r,1);break}};a.defined=function(a){return void 0!==a&#x26;&#x26;null!==a};a.attr
+=function(r,f,l){va ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
